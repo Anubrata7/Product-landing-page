@@ -1,0 +1,674 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* New Header Style */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.menu-toggle {
+    display: none; /* Hide toggle by default */
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+nav {
+    display: block; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-md-4 {
+    width: calc(25% - 20px);
+    margin: 10px;
+}
+
+.hero {
+    background-color: #f7f7f7;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btnn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* features section */
+.features {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: alternateBackground 20s infinite; /* Adjust timing as needed */
+}
+
+@keyframes alternateBackground {
+    0%, 100% {
+        background-image: url('img/background-img.jpg');
+    }
+    50% {
+        background-image: url('img/background-img-1.jpg');
+    }
+}
+
+.features h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.features p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.features .btnn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.features .btnn:hover {
+    background-color: #555;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.btnn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btnn:hover {
+    background-color: #555;
+}
+
+/* Price section */
+.pricing {
+    padding: 50px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pricing h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.products h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.drone-gallery h2,h3{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.products .row, .pricing .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing .col-md-4 {
+    width: calc(25% - 20px);
+    margin: 10px;
+}
+
+.pricing-card {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.price {
+    font-size: 20px;
+    color: #666;
+}
+
+/* Product section */
+.product-slider {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-top: 20px;
+}
+
+.product {
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.product:hover {
+    transform: translateY(-50px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-details {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.product:hover .product-details {
+    display: block;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+    padding: 50px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.customer-reviews h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.review-slider-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.review-slider {
+    display: flex;
+    padding: 20px 0;
+    animation: slide 20s linear infinite;
+}
+
+.review {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    margin-right: 20px;
+    flex-shrink: 0;
+    min-width: 400px;
+}
+
+.review:hover {
+    transform: translateY(-10px);
+}
+
+.review .reviewer {
+    font-style: italic;
+    margin-top: 10px;
+    color: #666;
+}
+
+.review .rating {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.review .rating .stars {
+    color: #f39c12;
+    margin-right: 5px;
+}
+
+.review-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.review-navigation button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.review-navigation button:hover {
+    background-color: #555;
+}
+
+/* Scrollbar customization for review slider */
+.review-slider-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.review-slider-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.review-slider-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.review-slider-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Animation for sliding reviews */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-400px * 3)); 
+    }
+}
+
+.review p {
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: normal; 
+}
+
+/* Thank-You section */
+.thank-you {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.thank-you h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.thank-you p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #444; 
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+    position: relative; 
+}
+
+.social-link:hover {
+    background-color: #777;
+}
+
+.social-link img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.thank-you .btnn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.thank-you .btnn:hover {
+    background-color: #fff;
+    color: #fff;
+}
+
+/* New footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-top {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-top .logo {
+    margin-bottom: 20px;
+}
+
+.footer-top .logo img {
+    max-width: 150px;
+}
+
+.footer-top .contact-info, .footer-top .newsletter {
+    margin-bottom: 20px;
+}
+
+.footer-top .contact-info p, .footer-top .newsletter p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.footer-top .newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 250px;
+}
+
+.footer-top .newsletter input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-top .newsletter input[type="submit"]:hover {
+    background-color: #777;
+}
+
+.footer-bottom {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/*Drone gallary section*/
+.drone-gallery {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.drone-gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.drone-gallery h3 {
+    font-size: 1.75em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.carousel-inner img {
+    max-height: 300px; 
+    max-width: 500px;
+    margin: 0 auto; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.carousel-inner .carousel-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators li {
+    background-color: #555;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #333;
+    border-radius: 50%;
+}
+
+/* Main */
+main {
+    padding-top: 80px;
+}
+
+/* Add media queries for pad and phone */
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .col-md-4 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .pricing-card {
+        margin-bottom: 20px;
+    }
+    .product-slider {
+        flex-wrap: wrap;
+    }
+    .product {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .review {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .pricing {
+        margin-top: 50px;
+        padding-bottom: 0;
+    }
+    .pricing .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .customer-reviews {
+        padding: 0;
+        background-color: #f7f7f7;
+        text-align: center;
+    }
+    .social-links {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center; 
+    }
+    .btnn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+   
+    .drone-gallery h2 {
+        font-size: 2em;
+    }
+
+    .drone-gallery h3 {
+        font-size: 1.5em;
+    }
+    .carousel-inner img {
+        max-height: 200px; 
+        max-width: 300px;
+    }
+}
+
+/* Phone styles (480px and below) */
+@media only screen and (max-width: 480px) {
+    .container {
+        max-width: 95%;
+    }
+    .nav a {
+        font-size: 1.2em;
+    }
+    .hero h1,
+    .features h1,
+    .pricing h2,
+    .products h2,
+    .drone-gallery h2 {
+        font-size: 2em;
+    }
+    main {
+        padding-top: 10px;
+    }
+}
+
